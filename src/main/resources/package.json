@@ -1,0 +1,18 @@
+{
+  "name": "battleship",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "@types/jquery": "^3.3.31",
+    "node-sass": "^4.13.0",
+    "typescript": "^3.6.4",
+    "uglify-js": "^3.6.4"
+  },
+  "scripts": {
+    "compileCss": "node-sass --output-style compressed sass/style.sass static/style.css",
+    "compileJs": "tsc -p tsconfig.json",
+    "uglifyJs": "uglifyjs static/stuff.js -c -m -o static/stuff.js",
+    "watchSass": "node-sass -w sass/style.sass static/style.css",
+    "watchTs": "tsc -w -p tsconfig.json"
+  }
+}

@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+  <title>
+    Battleship
+  </title>
+  <meta name="viewport" content="initial-scale=0.7, width=device-width"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha384-H5O3U+oUYwd/bFECZMaQ1XJlueV5e1gB4b7Xt0M06fPbgz48WH33qxUyQNPeZVou" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/plain-draggable@2.5.12/plain-draggable.min.js" integrity="sha384-9wTUojzuBH6fD8U401121o6f4M98qWnjRCXYb3BteVuf462XIkdFvoXYie2bPauC" crossorigin="anonymous"></script>
+  <script src="stuff.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="navbar-brand">
+      BATTLESHIP
+    </div>
+  </div>
+</header>
+<div class="container" id="whatever">
+  <div class="card">
+    <div id="playerBoard" class="board">
+      <span class="gridline horizontal g1"></span>
+      <span class="gridline horizontal g2"></span>
+      <span class="gridline horizontal g3"></span>
+      <span class="gridline horizontal g4"></span>
+      <span class="gridline horizontal g5"></span>
+      <span class="gridline horizontal g6"></span>
+      <span class="gridline horizontal g7"></span>
+      <span class="gridline horizontal g8"></span>
+      <span class="gridline horizontal g9"></span>
+
+      <span class="gridline vertical g1"></span>
+      <span class="gridline vertical g2"></span>
+      <span class="gridline vertical g3"></span>
+      <span class="gridline vertical g4"></span>
+      <span class="gridline vertical g5"></span>
+      <span class="gridline vertical g6"></span>
+      <span class="gridline vertical g7"></span>
+      <span class="gridline vertical g8"></span>
+      <span class="gridline vertical g9"></span>
+    </div>
+  </div>
+  <div class="card">
+    <div id="opponentBoard" class="board">
+      <span class="gridline horizontal g1"></span>
+      <span class="gridline horizontal g2"></span>
+      <span class="gridline horizontal g3"></span>
+      <span class="gridline horizontal g4"></span>
+      <span class="gridline horizontal g5"></span>
+      <span class="gridline horizontal g6"></span>
+      <span class="gridline horizontal g7"></span>
+      <span class="gridline horizontal g8"></span>
+      <span class="gridline horizontal g9"></span>
+
+      <span class="gridline vertical g1"></span>
+      <span class="gridline vertical g2"></span>
+      <span class="gridline vertical g3"></span>
+      <span class="gridline vertical g4"></span>
+      <span class="gridline vertical g5"></span>
+      <span class="gridline vertical g6"></span>
+      <span class="gridline vertical g7"></span>
+      <span class="gridline vertical g8"></span>
+      <span class="gridline vertical g9"></span>
+
+      <div id="opponentOverlay"><div></div></div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button type="button" class="button" id="reset">Reset</button>
+  <a class="button" href="https://github.com/0lsen/battleship" target="_blank" id="github"></a>
+</div>
+
+<div id="overlay">
+  <div class="card"></div>
+</div>
+
+<script>
+  var controller;
+  $(function () {
+    controller = new Controller();
+    controller.init();
+  });
+</script>
+</body>
+</html>

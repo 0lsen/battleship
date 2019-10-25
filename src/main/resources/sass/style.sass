@@ -1,0 +1,237 @@
+body
+  padding-bottom: 30px
+
+.header
+  margin-bottom: 25px
+  border-bottom: 1px solid #eee
+  .navbar-brand
+    padding-top: 15px
+
+#whatever
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+  .card
+    margin-bottom: 20px
+
+#opponentBoard
+  cursor: pointer
+
+#opponentOverlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgba(0,0,0, 0.5)
+  z-index: 3
+  div
+    color: #fff
+    font-weight: 900
+    font-size: 25px
+
+.board
+  width: 402px
+  height: 402px
+  border: 1px solid #000
+  background-color: #efefef
+  margin: 25px
+  position: relative
+
+  .gridline
+    background-color: #000
+    position: absolute
+
+    &.vertical
+      width: 1px
+      height: 100%
+      &.g1
+        left: 40px
+      &.g2
+        left: 80px
+      &.g3
+        left: 120px
+      &.g4
+        left: 160px
+      &.g5
+        left: 200px
+      &.g6
+        left: 240px
+      &.g7
+        left: 280px
+      &.g8
+        left: 320px
+      &.g9
+        left: 360px
+
+    &.horizontal
+      height: 1px
+      width: 100%
+      &.g1
+        top: 40px
+      &.g2
+        top: 80px
+      &.g3
+        top: 120px
+      &.g4
+        top: 160px
+      &.g5
+        top: 200px
+      &.g6
+        top: 240px
+      &.g7
+        top: 280px
+      &.g8
+        top: 320px
+      &.g9
+        top: 360px
+
+  .x0
+    left: 0px
+  .x1
+    left: 40px
+  .x2
+    left: 80px
+  .x3
+    left: 120px
+  .x4
+    left: 160px
+  .x5
+    left: 200px
+  .x6
+    left: 240px
+  .x7
+    left: 280px
+  .x8
+    left: 320px
+  .x9
+    left: 360px
+
+  .y0
+    top: 0px
+  .y1
+    top: 40px
+  .y2
+    top: 80px
+  .y3
+    top: 120px
+  .y4
+    top: 160px
+  .y5
+    top: 200px
+  .y6
+    top: 240px
+  .y7
+    top: 280px
+  .y8
+    top: 320px
+  .y9
+    top: 360px
+
+.ship
+  position: absolute
+
+  &.horizontal
+    height: 40px
+    &.carrier
+      width: 200px
+    &.battleship
+      width: 160px
+    &.destroyer
+      width: 120px
+    &.patrol
+      width: 80px
+
+  &.vertical
+    width: 40px
+    &.carrier
+      height: 200px
+    &.battleship
+      height: 160px
+    &.destroyer
+      height: 120px
+    &.patrol
+      height: 80px
+
+  > div
+    background: #aaa
+    border-radius: 15px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 4px 0 0 4px
+    box-shadow: 0 0 2px 1px #000
+
+  &.horizontal
+    > div
+      height: 33px
+    &.carrier > div
+      width: 191px
+    &.battleship > div
+      width: 152px
+    &.destroyer > div
+      width: 113px
+    &.patrol > div
+      width: 72px
+
+  &.vertical
+    > div
+      width: 33px
+    &.carrier > div
+      height: 191px
+    &.battleship > div
+      height: 152px
+    &.destroyer > div
+      height: 113px
+    &.patrol > div
+      height: 72px
+
+  > div > i
+    cursor: pointer
+    color: #fff
+
+.hit
+  width: 36px
+  height: 36px
+  position: absolute
+  border-radius: 50%
+  margin: 2px
+  &.success
+    background: #f00
+    margin: 5px
+    width: 31px
+    height: 31px
+  &.fail
+    border: 3px solid #000
+
+#overlay
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(0,0,0,0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 4
+
+  .card
+    padding: 25px 40px
+
+#github
+  background: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png) no-repeat center
+  width: 40px
+  background-size: 30px
+  float: right
+
+@media (max-width: 920px)
+  #whatever .card
+    width: 100%
+    min-width: 452px
+    display: flex
+    justify-content: center
