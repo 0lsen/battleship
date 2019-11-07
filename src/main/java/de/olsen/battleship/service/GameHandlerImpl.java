@@ -11,7 +11,7 @@ import de.olsen.battleship.model.ship.Destroyer;
 import de.olsen.battleship.model.ship.Patrol;
 import org.springframework.stereotype.Service;
 
-import javax.xml.bind.DatatypeConverter;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
@@ -69,7 +69,7 @@ public class GameHandlerImpl implements GameHandler {
     try {
       md = MessageDigest.getInstance("MD5");
       do {
-        id = DatatypeConverter.printHexBinary(md.digest(LocalTime.now().toString().getBytes()));
+        id = String.format("%032x", new BigInteger(1, md.digest(LocalTime.now().toString().getBytes())));
       } while (games.containsKey(id));
       return id;
     } catch (NoSuchAlgorithmException e) {
