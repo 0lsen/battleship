@@ -49,7 +49,7 @@
         <executions>
           <execution>
             <id>yarn-install</id>
-            <phase>generate-resources</phase>
+            <phase>package</phase>
             <configuration>
               <workingDirectory>${resources.path}</workingDirectory>
               <executable>yarn</executable>
@@ -63,7 +63,7 @@
           </execution>
           <execution>
             <id>compile-js</id>
-            <phase>generate-resources</phase>
+            <phase>package</phase>
             <configuration>
               <workingDirectory>${resources.path}</workingDirectory>
               <executable>yarn</executable>
@@ -78,7 +78,7 @@
           </execution>
           <execution>
             <id>uglify-js</id>
-            <phase>generate-resources</phase>
+            <phase>package</phase>
             <configuration>
               <workingDirectory>${resources.path}</workingDirectory>
               <executable>yarn</executable>
@@ -93,7 +93,7 @@
           </execution>
           <execution>
             <id>compile-css</id>
-            <phase>generate-resources</phase>
+            <phase>package</phase>
             <configuration>
               <workingDirectory>${resources.path}</workingDirectory>
               <executable>yarn</executable>
